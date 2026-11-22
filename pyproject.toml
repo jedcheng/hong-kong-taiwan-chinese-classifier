@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hkness"
+version = "0.1.0"
+description = "Hong Kong vs Taiwan Traditional Chinese classifier (char n-gram logistic regression)"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dependencies = ["numpy", "scikit-learn>=1.0", "huggingface_hub", "pandas"]
+
+[project.scripts]
+hkness-score = "hkness.cli:main"
+
+[tool.setuptools]
+packages = ["hkness"]
